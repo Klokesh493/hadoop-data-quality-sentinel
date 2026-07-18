@@ -1,0 +1,4 @@
+table,partition_date,null_rate,late_files,schema_errors
+user_events,2026-07-17,0.01,0,0
+app_sessions,2026-07-17,0.08,4,1
+purchase_events,2026-07-17,0.03,2,0
