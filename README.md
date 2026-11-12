@@ -24,4 +24,16 @@ Run `make verify` with Make and Python 3 installed. The target runs the document
 
 ## Project walkthrough
 
+```mermaid
+flowchart LR
+    A["Hadoop partition quality export"]
+    B["Deduct penalties for nulls, late files, and schema errors"]
+    C["Compare partition score to gate thresholds"]
+    D["Block or review low scores"]
+    E["Pass score of at least 85"]
+    A --> B --> C
+    C --> D
+    C --> E
+```
+
 [Architecture and data flow](docs/ARCHITECTURE.md) · [Business problem, demo, and verification](docs/CASE_STUDY.md)

@@ -4,11 +4,14 @@ Scores Hadoop table partitions before downstream ML pipelines consume them.
 
 ```mermaid
 flowchart LR
-    N0["sample_partitions.csv"]
-    N1["quality_sentinel.py"]
-    N2["quality score / gate / partition report"]
-    N3["Result for operator review"]
-    N0 --> N1 --> N2 --> N3
+    A["Hadoop partition quality export"]
+    B["Deduct penalties for nulls, late files, and schema errors"]
+    C["Compare partition score to gate thresholds"]
+    D["Block or review low scores"]
+    E["Pass score of at least 85"]
+    A --> B --> C
+    C --> D
+    C --> E
 ```
 
 ## Operational boundaries
