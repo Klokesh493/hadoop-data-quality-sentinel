@@ -1,0 +1,2 @@
+table,partition_date,null_rate,late_files,schema_errors
+purchase_events,2026-07-17,0.03,2,0
