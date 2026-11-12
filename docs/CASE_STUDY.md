@@ -2,7 +2,7 @@
 
 ## Business problem
 
-Scores Hadoop table partitions before downstream ML pipelines consume them.
+A malformed or incomplete Hadoop partition can propagate defects into training and reporting. Reviewers need a gate before consuming it.
 
 ## Reproduce the workflow
 
